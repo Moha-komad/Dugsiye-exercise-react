@@ -320,12 +320,113 @@
 
 // export default App;
 
-import LoginForm from "./LoginForm";
+// import LoginForm from "./LoginForm";
+
+// const App = () => {
+//   return (
+//     <div>
+//       <LoginForm />
+//     </div>
+//   );
+// };
+
+// export default App;
+// const App = () => {
+//   const handleClick = () => {
+//     alert("Button Clicked!");
+//   };
+
+//   return (
+//     <div>
+//       <h1>React Event Handling</h1>
+
+//       <button onClick={handleClick}>
+//         Click Me
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+// import { useState } from "react";
+
+// const App = () => {
+//   const [name, setName] = useState("");
+
+//   // Runs when the button is clicked
+//   const handleClick = () => {
+//     console.log("Button Clicked!");
+//   };
+
+//   // Runs when the user types
+//   const handleChange = (event) => {
+//     console.log("Input Value:", event.target.value);
+//     setName(event.target.value);
+//   };
+
+//   // Runs when the form is submitted
+//   const handleSubmit = (event) => {
+//     event.preventDefault();
+//     console.log("Form Submitted!");
+//     console.log("Username:", name);
+//   };
+
+//   return (
+//     <div>
+//       <h1>React Event Handling</h1>
+
+//       <form onSubmit={handleSubmit}>
+//         <input
+//           type="text"
+//           placeholder="Enter your name"
+//           value={name}
+//           onChange={handleChange}
+//         />
+
+//         <br />
+//         <br />
+
+//         <button type="submit">Submit</button>
+//       </form>
+
+//       <br />
+
+//       <button onClick={handleClick}>Click Me</button>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+import { useState } from "react";
 
 const App = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
   return (
     <div>
-      <LoginForm />
+      <h1>Count: {count}</h1>
+
+      <button
+        onClick={decrement}
+        disabled={count === 0}
+      >
+        Decrement
+      </button>
+
+      <button onClick={increment}>
+        Increment
+      </button>
     </div>
   );
 };
