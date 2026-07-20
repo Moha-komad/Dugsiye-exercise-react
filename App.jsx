@@ -290,30 +290,42 @@
 // };
 
 // export default App;
-import UserList from "./UserList";
+// import UserList from "./UserList";
+
+// const App = () => {
+//   const users = [
+//     {
+//       id: 1,
+//       name: "John Doe",
+//       email: "john@example.com",
+//     },
+//     {
+//       id: 2,
+//       name: "Jane Smith",
+//       email: "jane@example.com",
+//     },
+//     {
+//       id: 3,
+//       name: "Ali Hassan",
+//       email: "ali@example.com",
+//     },
+//   ];
+
+//   return (
+//     <div>
+//       <UserList users={users} />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+import LoginForm from "./LoginForm";
 
 const App = () => {
-  const users = [
-    {
-      id: 1,
-      name: "John Doe",
-      email: "john@example.com",
-    },
-    {
-      id: 2,
-      name: "Jane Smith",
-      email: "jane@example.com",
-    },
-    {
-      id: 3,
-      name: "Ali Hassan",
-      email: "ali@example.com",
-    },
-  ];
-
   return (
     <div>
-      <UserList users={users} />
+      <LoginForm />
     </div>
   );
 };
